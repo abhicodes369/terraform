@@ -1,0 +1,10 @@
+# Copy this file to terraform.tfvars and fill in your values
+# NEVER commit terraform.tfvars to GitHub — it contains secrets!
+
+aws_region         = "us-east-1"
+project_name       = "react-spa-cicd"
+
+github_owner       = "YOUR_GITHUB_USERNAME"
+github_repo        = "YOUR_REPO_NAME"
+github_branch      = "main"
+github_oauth_token = "ghp_XXXXXXXXXXXXXXXXXXXXXXXX"
