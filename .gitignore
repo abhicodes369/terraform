@@ -1,0 +1,13 @@
+# Terraform secrets — NEVER commit these
+cicd-aws/terraform/terraform.tfvars
+cicd-aws/terraform/.terraform/
+cicd-aws/terraform/.terraform.lock.hcl
+cicd-aws/terraform/terraform.tfstate
+cicd-aws/terraform/terraform.tfstate.backup
+
+# React build output
+react/node_modules/
+react/build/
+
+# OS
+.DS_Store
