@@ -306,13 +306,22 @@ resource "aws_iam_role_policy" "codepipeline_policy" {
       {
         Effect = "Allow"
         Action = [
-          "s3:GetObject", "s3:PutObject",
-          "s3:GetObjectVersion", "s3:GetBucketVersioning"
+          "s3:GetBucketVersioning",
+          "s3:GetBucketLocation",
+          "s3:GetBucketAcl",
+          "s3:ListBucket"
         ]
-        Resource = [
-          aws_s3_bucket.artifacts.arn,
-          "${aws_s3_bucket.artifacts.arn}/*"
+        Resource = aws_s3_bucket.artifacts.arn
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "s3:GetObject",
+          "s3:GetObjectVersion",
+          "s3:PutObject",
+          "s3:PutObjectAcl"
         ]
+        Resource = "${aws_s3_bucket.artifacts.arn}/*"
       },
       {
         Effect = "Allow"
