@@ -269,7 +269,7 @@ resource "aws_codebuild_project" "build" {
 
   source {
     type      = "CODEPIPELINE"
-    buildspec = "buildspec.yml"
+    buildspec = "cicd-aws/buildspec.yml"
   }
 
   tags = {

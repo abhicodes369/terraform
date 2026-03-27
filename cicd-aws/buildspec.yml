@@ -6,7 +6,7 @@ phases:
       nodejs: 18
     commands:
       - echo Installing dependencies...
-      - cd react-app
+      - cd react
       - npm ci
 
   build:
@@ -16,10 +16,10 @@ phases:
       - echo Build complete.
 
 artifacts:
-  base-directory: react-app/build
+  base-directory: react/build
   files:
     - '**/*'
 
 cache:
   paths:
-    - react-app/node_modules/**/*
+    - react/node_modules/**/*
